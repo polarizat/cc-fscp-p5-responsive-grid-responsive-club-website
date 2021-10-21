@@ -282,7 +282,7 @@ li {
   }
   
   li {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .container {
     grid-template-rows: 48px 232px repeat(5, auto) 48px;
