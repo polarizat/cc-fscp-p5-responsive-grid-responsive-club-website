@@ -3,387 +3,224 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: Montserrat, sans-serif;
   font-size: 16px;
   background-color: rgb(255, 255, 255);
 }
-
 h1 {
   font-size: 6rem;
+  font-family: Merriweather, sans-serif;
 }
-
 h2 {
   font-size: 2.5rem;
+  font-family: Merriweather, sans-serif;
 }
-
 p {
   font-size: 1.2rem;
+  line-height: 140%;
 }
-
 li {
-  color: yellow;
+  color: rgb(238, 238, 238);
   padding: 0.5rem 1.5rem;
   margin-right: 2.5rem;
   display: inline-block;
   font-size: 1.5rem;
+  font-weight: bold;
+
 }
 
 .container {
-    display: grid;
-    width: 100%;
-    margin: auto;
+  display: grid;
+  width: 100%;
+  margin: auto;
 
-    grid-template-columns: 48px repeat(6, 1fr) 48px;
-    grid-template-rows: 64px 420px auto auto auto auto 64px;
+  grid-template-columns: 48px repeat(6, 1fr) 48px;
+  grid-template-rows: 64px 420px auto auto auto auto 64px;
 
-    grid-row-gap: 7rem;
-  }
-
-
-
-
-  /* Header */
-
-  .nav-header {
-    grid-area: 1 / 1 / 2 / 9;
-    background-color: rgb(17, 26, 13);
-    color: rgb(255, 236, 228);
-    display: inline-flex;
-    align-items: center;
-    justify-content: end;
-  }
-  .banner {
-    grid-area: 1 / 1 / 4 / 9;
-    height: 520px;
-    padding-top: 1rem;
-    background-image: url("https://codecademy-content.s3.amazonaws.com/PRO/independent-practice-projects/responsive-club-site/img/runner-splash.jpg");
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
-    margin-top: 64px;
-  }
-  .banner h1 {
-    color: rgb(255, 255, 255);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 6rem;
-    padding: 2rem;
-    background-color: rgba(0.5, 0.5, 0.5, 0.8);
-    text-align: center;
-  }
-
-
-  
-
-/* Summary */
-
-  .summary {
-    grid-area: 3 / 2 / 4 / 4;
-    padding: 0 0rem;
-    align-self: center;
-    padding: 1.5rem;
-  }
-  .summary h2 {
-    color: rgb(0, 66, 9);
-    font-weight: 900;
-    margin-bottom: 2rem;
-  }
-  
-  .summary p {
-    color: rgb(87, 87, 87);
-    margin-top: 1rem;
-  }
-
-  .photos-summary {
-    grid-area: 3 / 4 / 4 / 9;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-right: 48px;
-  }
-
-  .photos-summary img {
-    height: max(240px, 12vw);
-    width: auto;
-    border-radius: 1rem;
-  }
-  
-
-
-
-/* Testimonial */
-
-  .testimonial {
-    grid-area: 4 / 1 / 5 / 9;
-    background-color: rgb(19, 56, 19);
-    padding: 3rem 25%;
-    color: white;
-  }
-  .testimonial h2 {
-    color: yellow;
-    margin: 1rem 0;
-  }
-  .photos-testimonial {
-    grid-area: 5 / 1 / 6 / 9;
-    display: inline-flex;
-    justify-content: space-between;
-    margin: 0 2rem;
-  }
-  .photos-testimonial img {
-    height: auto;
-    width: 32%;
-    border-radius: 1rem;
-  }
-
-
-
-
-
-/* Meetup */
-
-  .meetup {
-    grid-area: 6 / 3 / 7 / 7;
-    height: fit-content;
-    margin-bottom: 2rem;
-    display: inline-flex;
-    flex-flow: column;
-  }
-  
-  .meetup img {
-    width: 35%;
-    height: auto;
-    display: block;
-    margin: auto;
-    border-radius: 25% 5%;
-  }
-  
-  .meetup h2 {
-    color: rgb(17, 26, 13);
-    text-align: center;
-    padding: 2rem;
-  }
-
-  
-
-
-
-  /* Footer */
-
-  .nav-footer {
-    grid-area: 7 / 1 / 8 / 9;
-    background-color: rgb(17, 26, 13);
-    color: rgb(255, 236, 228);
-    height: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: end;
-    margin-bottom: 0;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-@media only screen and (max-width:320px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  
-  h2 {
-    font-size: 1.2rem;
-  }
-  
-  p {
-    font-size: 0.8rem;
-  }
-  
-  li {
-    color: yellow;
-    padding: 0.5rem 0.5rem;
-    margin-right: .5rem;
-    margin-left: .5rem;
-    display: inline-block;
-    font-size: 0.7rem;
-  }
-  .container {
-    grid-template-columns: 48px repeat(6, 1fr) 48px;
-    grid-template-rows: 48px 132px repeat(5, auto) 48px;
-
-    grid-row-gap: 1rem;
-  }
-
-  .nav-header {
-    grid-area: 1 / 1 / 2 / 9;
-    background-color: rgb(17, 26, 13);
-    color: rgb(255, 236, 228);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .banner {
-    height: 160px;
-    margin-top: 48px;
-  }
-  .banner h1 {
-    margin-top: 4rem;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  /* Summary */
-  .summary {
-    grid-area: 3 / 1 / 4 / 9;
-  }
-  .summary h2 {
-    margin-bottom: 1rem;
-  }
-
-  .photos-summary {
-    grid-area: 4 / 1 / 5 / 9;
-    margin: auto;
-    flex-flow: column nowrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .photos-summary img {
-    height: min(180px, 50vw);
-  }
-
-
-/* Testimonial */
-  .testimonial {
-    grid-area: 5 / 1 / 6 / 9;
-    padding: 2rem 15%;
-  }
-  .testimonial h2 {
-    color: yellow;
-    margin: 1rem 0;
-  }
-  .photos-testimonial {
-    grid-area: 6 / 1 / 7 / 9;
-    margin: auto;
-    flex-flow: column nowrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .photos-testimonial img {
-    height: min(180px, 50vw);
-    width: auto;
-    border-radius: 1rem;
-  }
-
-/* Meetup */
-  .meetup {
-    grid-area: 7 / 2 / 8 / 8;
-    margin-bottom: 1rem;
-  }
-
-  .meetup img {
-    width: 80%;
-  }
-
-  .meetup h2 {
-    padding: 1rem;
-  }
-
-  /* Footer */
-  .nav-footer {
-    grid-area: 8 / 1 / 9 / 9;
-    color: rgb(255, 236, 228);
-    justify-content: center;
-  }
-
+  grid-row-gap: 7rem;
 }
 
 
+/* Header */
+.nav-header {
+  grid-area: 1 / 1 / 2 / 9;
+  background-color: rgb(17, 26, 13);
+  color: rgb(255, 236, 228);
+  display: inline-flex;
+  align-items: center;
+  justify-content: end;
+}
+.banner {
+  grid-area: 1 / 1 / 4 / 9;
+  height: 520px;
+  padding-top: 1rem;
+  background-image: url("https://codecademy-content.s3.amazonaws.com/PRO/independent-practice-projects/responsive-club-site/img/runner-splash.jpg");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  margin-top: 64px;
+}
+.banner h1 {
+  color: rgb(255, 255, 255);
+  margin-top: 6rem;
+  padding: 2rem;
+  background-color: rgba(0.5, 0.5, 0.5, 0.8);
+  text-align: center;
+}
 
 
+/* Summary */
+.summary {
+  grid-area: 3 / 2 / 4 / 4;
+  padding: 0 0rem;
+  align-self: center;
+  padding: 1.5rem;
+}
+.summary h2 {
+  color: rgb(0, 66, 9);
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.summary p {
+  color: rgb(87, 87, 87);
+  margin-top: 1rem;
+}
+
+.photos-summary {
+  grid-area: 3 / 4 / 4 / 9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-right: 48px;
+}
+
+.photos-summary img {
+  height: max(240px, 12vw);
+  width: auto;
+  border-radius: 1rem;
+}
 
 
+/* Testimonial */
+.testimonial {
+  grid-area: 4 / 1 / 5 / 9;
+  background-color: rgb(19, 56, 19);
+  padding: 3rem 25%;
+  color: white;
+}
+.testimonial h2 {
+  color: yellow;
+  margin: 1rem 0;
+}
+.photos-testimonial {
+  grid-area: 5 / 1 / 6 / 9;
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+.photos-testimonial img {
+  height: auto;
+  width: 32%;
+  border-radius: 1rem;
+}
+
+/* Meetup */
+.meetup {
+  grid-area: 6 / 3 / 7 / 7;
+  height: fit-content;
+  margin-bottom: 2rem;
+  display: inline-flex;
+  flex-flow: column;
+}
+
+.meetup img {
+  width: 35%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 25% 5%;
+}
+
+.meetup h2 {
+  color: rgb(17, 26, 13);
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Footer */
+.nav-footer {
+  grid-area: 7 / 1 / 8 / 9;
+  background-color: rgb(17, 26, 13);
+  color: rgb(255, 236, 228);
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 0;
+}
 
 
-@media only screen and (max-width:640px) {
+/*Responsive layouts  */
+@media only screen and (max-width:1024px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 3.3rem;
   }
   
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
   
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   
   li {
-    color: yellow;
     padding: 0.5rem 0.5rem;
     margin-right: .5rem;
     margin-left: .5rem;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .container {
     grid-template-columns: 48px repeat(6, 1fr) 48px;
-    grid-template-rows: 48px 232px repeat(5, auto) 48px;
+    grid-template-rows: 48px 292px repeat(5, auto) 48px;
 
-    grid-row-gap: 2rem;
+    grid-row-gap: 2.5rem;
   }
 
   .nav-header {
     grid-area: 1 / 1 / 2 / 9;
-    background-color: rgb(17, 26, 13);
-    color: rgb(255, 236, 228);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
   }
+
   .banner {
-    height: 260px;
+    height: 320px;
     margin-top: 48px;
   }
   .banner h1 {
-    margin-top: 6rem;
-    padding: 2rem;
+    margin-top: 7rem;
+    padding: 2.5rem;
   }
 
   /* Summary */
   .summary {
-    grid-area: 3 / 1 / 4 / 9;
+    grid-area: 3 / 2 / 4 / 8;
   }
   .summary h2 {
     margin-bottom: 1rem;
   }
 
   .photos-summary {
-    grid-area: 4 / 1 / 5 / 9;
+    grid-area: 4 / 2 / 5 / 8;
     margin: auto;
     flex-flow: row wrap;
     justify-content: center;
     gap: 1rem;
   }
   .photos-summary img {
-    height: min(160px, 35vw);
+    height: min(220px, 40vw);
   }
 
 
@@ -431,7 +268,91 @@ li {
   }
 
 }
-
-
-
+@media only screen and (max-width:640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
   
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  li {
+    font-size: 1rem;
+  }
+  .container {
+    grid-template-rows: 48px 232px repeat(5, auto) 48px;
+    grid-row-gap: 2rem;
+  }
+
+  .nav-header {
+    justify-content: center;
+  }
+  .banner {
+    height: 260px;
+  }
+  .banner h1 {
+    margin-top: 6rem;
+  }
+
+  /* Summary */
+
+  .photos-summary {
+    grid-area: 4 / 1 / 5 / 9;
+    margin: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .photos-summary img {
+    height: min(160px, 35vw);
+  }
+}
+@media only screen and (max-width:320px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 0.8rem;
+  }
+  
+  li {
+    font-size: 0.6rem;
+  }
+  .container {
+    grid-template-rows: 48px 132px repeat(5, auto) 48px;
+    grid-row-gap: 1.5rem;
+  }
+
+  .banner {
+    height: 160px;
+  }
+  .banner h1 {
+    margin-top: 4rem;
+    padding: 1rem;
+  }
+
+  /* Summary */
+  .summary {
+    grid-area: 3 / 1 / 4 / 9;
+  }
+
+  .photos-summary {
+    grid-area: 4 / 1 / 5 / 9;
+  }
+
+  .photos-summary img {
+    height: min(180px, 50vw);
+  }
+
+}
+
